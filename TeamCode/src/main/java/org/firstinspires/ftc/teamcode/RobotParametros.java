@@ -1,15 +1,20 @@
 package org.firstinspires.ftc.teamcode;
 
+
 public class RobotParametros {
-    public final double radPerTick;
-    public final double wheelRadius;
-    public final double Lr;
+    public final double TICKS_PER_RAD;
+    public final double GEAR_REDUCTION;
+    public final double DIST_WHEEL_2_CIR; //mm
 
-    public RobotParametros(double ticksPerRev, double reduction,
-                           double wheelRadius, double Lr) {
+    public final double WHEEL_RADIUS; //mm
 
-        this.radPerTick = (2.0 * Math.PI) / (ticksPerRev * reduction);
-        this.wheelRadius = wheelRadius;
-        this.Lr = Lr;
+
+    public RobotParametros(double TICKS_PER_RAD, double GEAR_REDUCTION,
+                           double WHEEL_RADIUS, double DIST_WHEEL_2_CIR) {
+
+        this.TICKS_PER_RAD = TICKS_PER_RAD / (2*Math.PI);
+        this.WHEEL_RADIUS = WHEEL_RADIUS;
+        this.DIST_WHEEL_2_CIR = DIST_WHEEL_2_CIR;
+        this.GEAR_REDUCTION = GEAR_REDUCTION;
     }
 }
